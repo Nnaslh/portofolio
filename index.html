@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Annas Luthfi Hibatullah – QA Engineer</title>
+    <meta name="description" content="Portfolio of Annas Luthfi Hibatullah, Quality Assurance Engineer (Manual & Automation). Jakarta, Indonesia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root { --radius: 1rem; }
+      html, body { height: 100%; }
+      body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    </style>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            borderRadius: { '2xl': '1.25rem' },
+            colors: {
+              brand: {
+                50: '#eef7ff',
+                100: '#d9edff',
+                200: '#bfe0ff',
+                300: '#9ad0ff',
+                400: '#67b8ff',
+                500: '#3ea2ff',
+                600: '#1f88f0',
+                700: '#1568bf',
+                800: '#114f93',
+                900: '#0e3f74',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- React UMD + Babel Standalone -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-indigo-50 via-sky-50 to-teal-50 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900">
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState, useEffect, useMemo } = React;
+
+      // =====================
+      // DATA from CV
+      // =====================
+      const DATA = {
+        name: "Annas Luthfi Hibatullah",
+        role: "Quality Assurance Engineer",
+        location: "Jakarta, Indonesia",
+        email: "mailto:annasluthfi13@gmail.com",
+      //  phone: "085779411716",
+        linkedin: "https://www.linkedin.com/in/annas-luthfi-hibatullah",
+        github: "#",
+        summary:
+          "QA Engineer with strong experience across Android, iOS, Web, and API testing. Comfortable with both manual testing and automation (Cypress/Cucumber, Appium, JavaScript). Experienced in sprint-based delivery, defect triage, and clear test documentation.",
+        skills: [
+          "Manual Testing",
+          "Automation: Cypress + Cucumber",
+          "Automation: Appium (Android/iOS)",
+          "Selenium / Playwright (web E2E)",
+          "API Testing: Postman / Newman",
+          "Performance: JMeter",
+          "SQL (MySQL/PostgreSQL)",
+          "HTML/CSS/JavaScript",
+          "Test Case Design & Documentation",
+          "Jira / UAT Coordination",
+          "CI/CD basics (GitHub Actions/Jenkins)",
+          "Microsoft Office & Visio"
+        ],
+        tools: [
+          "Cypress", "Cucumber", "Appium", "Selenium", "Postman", "Newman", "JMeter", "Jira", "Git/GitHub", "MySQL", "PostgreSQL"
+        ],
+        experience: [
+          {
+            company: "Otto Digital Group",
+            title: "Software Quality Assurance Engineer",
+            period: "Oct 2024 – Present (Full‑time)",
+            points: [
+              "Manual testing for Android, iOS, web, and API platforms.",
+              "Develop and maintain test case documentation for ongoing projects.",
+              "Build and manage automation codebases for web, API, and Android testing using JavaScript.",
+              "Collaborate within the IT Squad for product development.",
+              "Retest reported user issues during and after production fixes."
+            ]
+          },
+          {
+            company: "PT Sunday Ins Indonesia (Sunday Insurance)",
+            title: "Quality Assurance Engineer",
+            period: "Oct 2023 – Oct 2024 (Full‑time)",
+            points: [
+              "Manual testing for web and API projects based on sprint cycles; defect reporting via Jira.",
+              "Developed & maintained automation scripts for front‑end apps using Cypress and Cucumber.",
+              "Created/updated test cases supporting automation and sprint progress.",
+              "Communicated test results to facilitate UAT; performed performance testing pre‑release.",
+              "Provided progress updates to regional team."
+            ]
+          },
+          {
+            company: "PT Kode Aplikasi Indonesia (Nusantara Beta Studio)",
+            title: "Software Quality Assurance",
+            period: "Sep 2022 – Sep 2023 (Full‑time)",
+            points: [
+              "Created test cases and documentation based on sprint.",
+              "Reviewed design and PRD before project kickoffs.",
+              "Developed automation scripts for faster regression testing.",
+              "Identified 1000+ bugs across projects prior to production release.",
+              "Multi‑platform testing for Android, iOS, Web, and API; managed client expectations and UX suggestions."
+            ]
+          },
+          {
+            company: "PT Pitjarus Teknologi",
+            title: "Data Quality Analyst",
+            period: "May 2022 – Sep 2022 (Contract)",
+            points: [
+              "Maintained database data quality for clients using MySQL.",
+              "Handled client data requests and end‑user support for web/app.",
+              "Created competitor‑movement reports in spreadsheets.",
+              "Collaborated with developers for issue resolution."
+            ]
+          },
+          {
+            company: "PT Dakota Buana Semesta (Dakota Cargo)",
+            title: "Web Developer",
+            period: "Jan 2022 – Apr 2022 (Contract)",
+            points: [
+              "Built requested web pages/apps with HTML, CSS, and JS.",
+              "Prepared implementation reports; trained new employees on systems.",
+              "Provided system support and assisted testing activities."
+            ]
+          }
+        ],
+        projects: [
+          "DaihatsuKu (Android)",
+          "Persita FC (Android, iOS, API, FE Web)",
+          "Hub.id (FE Web)",
+          "Moda Logistic (Android, API, FE Web)",
+          "Eraspace (Android, iOS, API)",
+          "Sunday Retail Insurance (API, FE Web)",
+          "OttoEdu (Web, API)",
+          "Otto App maintenance product (Android, iOS)"
+        ],
+        education: [
+          {
+            school: "Sekolah Tinggi Multi Media Yogyakarta",
+            period: "2017 – 2021",
+            degree: "Bachelor of Communication Science (Information Management), GPA 3.41"
+          }
+        ]
+      };
+
+      // =====================
+      // Utilities and atoms
+      // =====================
+      const cx = (...args) => args.filter(Boolean).join(" ");
+      function useDarkMode() {
+        const [dark, setDark] = React.useState(false);
+        React.useEffect(() => {
+          const initial = window?.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
+          setDark(!!initial);
+        }, []);
+        React.useEffect(() => {
+          document.documentElement.classList.toggle("dark", dark);
+        }, [dark]);
+        return { dark, setDark };
+      }
+      const Section = ({ id, title, children }) => (
+        <section id={id} className="scroll-mt-24 py-12 sm:py-16">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">{title}</h2>
+            {children}
+          </div>
+        </section>
+      );
+      const Card = ({ children, className }) => (
+        <div className={cx(
+          "rounded-2xl shadow-sm border border-indigo-100/80 dark:border-neutral-800 bg-white/90 dark:bg-neutral-900/90 backdrop-blur",
+          "p-5 sm:p-6",
+          className
+        )}>
+          {children}
+        </div>
+      );
+      const Tag = ({ children }) => (
+        <span className="inline-flex items-center rounded-full border text-xs px-2.5 py-1 mr-2 mb-2 border-sky-200 bg-white/70 text-slate-700 dark:border-sky-900/50 dark:bg-neutral-900/60 dark:text-slate-200">
+          {children}
+        </span>
+      );
+
+      // =====================
+      // App
+      // =====================
+      function Portfolio() {
+        const { dark, setDark } = useDarkMode();
+        const years = useMemo(() => 3, []);
+
+        return (
+          <div className="min-h-screen">
+            {/* Header */}
+            <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-950/70">
+              <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+                <nav className="flex items-center gap-6 text-sm">
+                  <a href="#about" className="text-slate-700 dark:text-slate-200 hover:underline">About</a>
+                  <a href="#experience" className="text-slate-700 dark:text-slate-200 hover:underline">Experience</a>
+                  <a href="#projects" className="text-slate-700 dark:text-slate-200 hover:underline">Projects</a>
+                  <a href="#skills" className="text-slate-700 dark:text-slate-200 hover:underline">Skills</a>
+                  <a href="#education" className="text-slate-700 dark:text-slate-200 hover:underline">Education</a>
+                  <a href="#contact" className="text-slate-700 dark:text-slate-200 hover:underline">Contact</a>
+                </nav>
+                <div className="flex items-center gap-2">
+                  <a href={DATA.linkedin} className="hidden sm:inline-flex text-sm px-3 py-1.5 rounded-xl border border-sky-200/70 text-sky-900 hover:bg-sky-50 dark:border-sky-900/50 dark:text-sky-200 dark:hover:bg-sky-900/30">LinkedIn</a>
+                  <button
+                    aria-label="Toggle dark mode"
+                    onClick={() => setDark(!dark)}
+                    className="text-sm px-3 py-1.5 rounded-xl border border-sky-200/70 text-sky-900 hover:bg-sky-50 dark:border-sky-900/50 dark:text-sky-200 dark:hover:bg-sky-900/30"
+                  >
+                    {dark ? "Light" : "Dark"}
+                  </button>
+                </div>
+              </div>
+            </header>
+
+            {/* Hero */}
+            <section className="border-b border-indigo-100/70 dark:border-neutral-900">
+              <div className="max-w-6xl mx-auto px-4 py-16 sm:py-24">
+                <div className="grid sm:grid-cols-2 gap-10 items-center">
+                  <div>
+                    <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                      {DATA.name}
+                    </h1>
+                    <p className="mt-3 text-lg text-slate-700 dark:text-slate-300">{DATA.role}</p>
+                    <p className="mt-4 text-slate-600 dark:text-slate-400">
+                      {DATA.summary}
+                    </p>
+                    <div className="mt-5 flex flex-wrap items-center gap-3">
+                      <a href="#contact" className="px-4 py-2 rounded-xl bg-sky-600 text-white hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-400 shadow-sm">
+                        Contact Me
+                      </a>
+                      <a href={DATA.linkedin} className="px-4 py-2 rounded-xl border border-sky-200/70 text-sky-900 hover:bg-sky-50 dark:border-sky-900/50 dark:text-sky-200 dark:hover:bg-sky-900/30">
+                        LinkedIn
+                      </a>
+                    </div>
+                    <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">Based in {DATA.location} • {years}+ years experience</p>
+                  </div>
+                  <div>
+                    <div className="rounded-2xl shadow-sm border border-indigo-100/80 dark:border-neutral-800 bg-white/90 dark:bg-neutral-900/90 backdrop-blur p-6">
+                      <h3 className="font-semibold text-slate-900 dark:text-slate-100">Quick Facts</h3>
+                      <ul className="mt-3 space-y-2 text-slate-700 dark:text-slate-300 list-disc list-inside">
+                        <li>Manual + Automation across Mobile, Web, and API.</li>
+                        <li>Comfortable with Cypress/Cucumber, Appium, Postman/Newman, JMeter.</li>
+                        <li>Strong documentation and cross‑team communication.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* About */}
+            <Section id="about" title="About">
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="md:col-span-2">
+                  <p className="text-slate-700 dark:text-slate-300">
+                    I help teams ship reliably by pairing thorough manual testing with pragmatic automation. From sprint planning to UAT support, I translate requirements into test cases, build maintainable scripts, and surface clear, actionable defects.
+                  </p>
+                </Card>
+                <Card>
+                  <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Core Tools</h4>
+                  <div className="flex flex-wrap">
+                    {DATA.tools.map((t) => <Tag key={t}>{t}</Tag>)}
+                  </div>
+                </Card>
+              </div>
+            </Section>
+
+            {/* Experience */}
+            <Section id="experience" title="Experience">
+              <div className="grid gap-4">
+                {DATA.experience.map((job) => (
+                  <Card key={job.company}>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                      <div>
+                        <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                          {job.title} • {job.company}
+                        </h3>
+                      </div>
+                      <div className="text-sm text-slate-500 dark:text-slate-400">{job.period}</div>
+                    </div>
+                    <ul className="mt-3 list-disc list-inside text-slate-700 dark:text-slate-300 space-y-2">
+                      {job.points.map((p, i) => <li key={i}>{p}</li>)}
+                    </ul>
+                  </Card>
+                ))}
+              </div>
+            </Section>
+
+            {/* Projects */}
+            <Section id="projects" title="Projects Done">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {DATA.projects.map((title) => (
+                  <Card key={title}>
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{title}</h3>
+                    <p className="mt-2 text-slate-700 dark:text-slate-300">High‑level testing ownership across platforms; details available upon request.</p>
+                  </Card>
+                ))}
+              </div>
+            </Section>
+
+            {/* Skills */}
+            <Section id="skills" title="Skills">
+              <Card>
+                <div className="flex flex-wrap">
+                  {DATA.skills.map((s) => <Tag key={s}>{s}</Tag>)}
+                </div>
+              </Card>
+            </Section>
+
+            {/* Education */}
+            <Section id="education" title="Education">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {DATA.education.map((e) => (
+                  <Card key={e.school}>
+                    <h3 className="font-semibold text-slate-900 dark:text-slate-100">{e.school}</h3>
+                    <p className="text-slate-700 dark:text-slate-300 mt-1">{e.degree}</p>
+                    <p className="text-slate-500 dark:text-slate-400 mt-1">{e.period}</p>
+                  </Card>
+                ))}
+              </div>
+            </Section>
+
+            {/* Contact */}
+            <Section id="contact" title="Contact">
+              <Card>
+                <p className="text-slate-700 dark:text-slate-300">
+                  Open to new challenges in QA / SDET / Test Engineering. Let’s connect!
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <a href={DATA.email} className="px-4 py-2 rounded-xl bg-sky-600 text-white hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-400 shadow-sm">Email</a>
+                  <a href={DATA.linkedin} className="px-4 py-2 rounded-xl border border-sky-200/70 text-sky-900 hover:bg-sky-50 dark:border-sky-900/50 dark:text-sky-200 dark:hover:bg-sky-900/30">LinkedIn</a>
+                  <a href={"tel:" + DATA.phone} className="px-4 py-2 rounded-xl border border-sky-200/70 text-sky-900 hover:bg-sky-50 dark:border-sky-900/50 dark:text-sky-200 dark:hover:bg-sky-900/30">Call</a>
+                </div>
+              </Card>
+            </Section>
+
+            {/* Footer */}
+            <footer className="py-10 border-t border-indigo-100/70 dark:border-neutral-900">
+              <div className="max-w-6xl mx-auto px-4 text-sm text-slate-500 dark:text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
+                <p>© {new Date().getFullYear()} {DATA.name}. Built with React & Tailwind.</p>
+                <p>Design is original and license‑free for personal use.</p>
+              </div>
+            </footer>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<Portfolio />);
+    </script>
+  </body>
+</html>
